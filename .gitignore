@@ -1,0 +1,7 @@
+# Build artifacts
+*.o
+*.a
+*.so
+clefia-cli
+tests/test_clefia
+build/
