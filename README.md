@@ -1,5 +1,9 @@
 # CLEFIA — clean-room C implementation
 
+[![Release](https://img.shields.io/github/v/release/kostyk348/clefia?sort=semver&color=blue)](https://github.com/kostyk348/clefia/releases)
+[![License](https://img.shields.io/badge/license-Apache-2.0-green)](https://github.com/kostyk348/clefia/blob/master/LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/kostyk348/clefia?branch=master)](https://github.com/kostyk348/clefia/commits/master)
+
 A dependency-free, portable **C99** implementation of **CLEFIA**, the
 128-bit block cipher designed by Sony (2007) and standardized as
 **ISO/IEC 29192-2** (lightweight cryptography). It supports **128 / 192 /
@@ -14,12 +18,14 @@ auditable, drop-in C code.
 > forbids redistribution/modification).
 
 ## Features
+
 - 128/192/256-bit keys, full 18/22/26-round schedule.
 - Single-file core (`src/clefia.c`), no external dependencies.
 - Block encrypt/decrypt plus an ECB helper.
 - Validated against the official RFC 6114 test vectors for all three key sizes.
 
 ## Build
+
 ```sh
 make all        # builds static + shared lib, CLI, and runs the self-test
 make test       # run RFC 6114 vector self-test
@@ -31,6 +37,7 @@ cmake -S . -B build && cmake --build build && ctest --test-dir build
 ```
 
 ## Usage
+
 ```c
 #include "clefia.h"
 
@@ -53,6 +60,7 @@ CLI:
 ```
 
 ## Algorithm notes
+
 CLEFIA is a 4-branch generalized Feistel network with two 8-bit S-boxes
 (S0, S1) and two 4×4 diffusion matrices (M0, M1). Its key schedule
 reuses the same primitives (the "double-SPN" / Diffusion Switching
@@ -61,4 +69,5 @@ uses GF(2⁸) arithmetic (poly `0x11d`) for diffusion and GF(2¹⁶)
 arithmetic (poly `0x1a831`) to derive the key-schedule constants.
 
 ## License
+
 MIT — see [LICENSE](LICENSE).
