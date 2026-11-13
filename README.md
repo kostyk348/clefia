@@ -1,8 +1,19 @@
+<div align="center">
+
+<img src="docs/banner.svg" alt="clefia banner" width="1000">
+
 # CLEFIA — clean-room C implementation
+
+### CLEFIA block cipher — clean-room C implementation (RFC 6114 / ISO/IEC 29192-2)
 
 [![Release](https://img.shields.io/github/v/release/kostyk348/clefia?sort=semver&color=blue)](https://github.com/kostyk348/clefia/releases)
 [![License](https://img.shields.io/badge/license-Apache-2.0-green)](https://github.com/kostyk348/clefia/blob/master/LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/kostyk348/clefia?branch=master)](https://github.com/kostyk348/clefia/commits/master)
+
+</div>
+
+---
+
 
 A dependency-free, portable **C99** implementation of **CLEFIA**, the
 128-bit block cipher designed by Sony (2007) and standardized as
